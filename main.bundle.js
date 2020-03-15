@@ -156,7 +156,7 @@ var AppModule = (function () {
 /***/ "../../../../../src/app/components/message-form/message-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chatcontrol\">\r\n  <input \r\n    type=\"text\"\r\n    class=\"form-control chatinput\"\r\n    (keyup.enter)=\"sendMessage()\" \r\n    [(ngModel)]=\"message.content\"\r\n    placeholder=\"Type your message ...\"\r\n  />\r\n  <button class=\"btn btn-info sendbtn\" (click)=\"sendMessage()\">\r\n    <img class=\" sendimg\" src=\"../../../assets/images/send.jpg\"/>\r\n    <i class=\"fa fa-telegram\"></i>\r\n  </button>\r\n  \r\n</div>\r\n"
+module.exports = "<div class=\"chatcontrol\">\r\n  <input \r\n    type=\"text\"\r\n    class=\"form-control chatinput\"\r\n    (keyup.enter)=\"sendMessage()\" \r\n    [(ngModel)]=\"message.content\"\r\n    placeholder=\"Type your message ...\"\r\n  />\r\n  <button class=\"btn btn-info sendbtn\" (click)=\"sendMessage()\">\r\n    <img class=\" sending\" src=\"../../../assets/images/send.jpg\"/>\r\n    <i class=\"fa fa-telegram\"></i>\r\n  </button>\r\n  \r\n</div>\r\n"
 
 /***/ }),
 
