@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"chathead\">\r\n  <div class=\"chathead-icon\">\r\n    <img src=\"../../../assets/images/chatbots.png\" height=\"40\" width=\"40\"/>\r\n  </div>\r\n  <div class=\"chathead-text\">\r\n    GKMS: Application\r\n  </div>\r\n</div>\r\n\r\n<div class=\"chatform\">\r\n  <message-list [messages]=\"messages\"></message-list>\r\n  <message-form [message]=\"message\" [messages]=\"messages\"></message-form>\r\n</div>\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"chathead\">\r\n  <div class=\"chathead-icon\">\r\n    <img src=\"../../../assets/images/chatbots.jpg\" height=\"40\" width=\"70\"/>\r\n  </div>\r\n  <div class=\"chathead-text\">\r\n    GKMS: Application\r\n  </div>\r\n</div>\r\n\r\n<div class=\"chatform\">\r\n  <message-list [messages]=\"messages\"></message-list>\r\n  <message-form [message]=\"message\" [messages]=\"messages\"></message-form>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -64,7 +64,7 @@ var AppComponent = (function () {
     function AppComponent() {
         this.message = new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('', 'assets/images/user.png');
         this.messages = [
-            new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('Welcome to GKMS chat Application..!! How can i help You', 'assets/images/eddy.png', new Date(), 'message', true)
+            new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('Welcome to GKMS Application..!! How can i help You', 'assets/images/eddy.png', new Date(), 'message', true)
         ];
     }
     AppComponent = __decorate([
