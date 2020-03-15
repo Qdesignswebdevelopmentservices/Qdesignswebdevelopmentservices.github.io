@@ -62,9 +62,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.message = new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('', 'assets/images/user.png');
+        this.message = new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('', '/assets/images/user.png');
         this.messages = [
-            new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('Welcome to GKMS Application..!! How can i help You', 'assets/images/eddy.png', new Date(), 'message', true)
+            new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('Welcome to GKMS Application..!! How can i help You', '/assets/images/eddy.png', new Date(), 'message', true)
         ];
     }
     AppComponent = __decorate([
@@ -156,7 +156,7 @@ var AppModule = (function () {
 /***/ "../../../../../src/app/components/message-form/message-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chatcontrol\">\r\n  <input \r\n    type=\"text\"\r\n    class=\"form-control chatinput\"\r\n    (keyup.enter)=\"sendMessage()\" \r\n    [(ngModel)]=\"message.content\"\r\n    placeholder=\"Type your message ...\"\r\n  />\r\n  <button class=\"btn btn-info sendbtn\" (click)=\"sendMessage()\">\r\n    <img class=\" sending\" src=\"../../../assets/images/send.jpg\"/>\r\n    <i class=\"fa fa-telegram\"></i>\r\n  </button>\r\n  \r\n</div>\r\n"
+module.exports = "<div class=\"chatcontrol\">\r\n  <input \r\n    type=\"text\"\r\n    class=\"form-control chatinput\"\r\n    (keyup.enter)=\"sendMessage()\" \r\n    [(ngModel)]=\"message.content\"\r\n    placeholder=\"Type your message ...\"\r\n  />\r\n  <button class=\"btn btn-info sendbtn\" (click)=\"sendMessage()\">\r\n    <!--<img class=\" sending\" src=\"../../../assets/images/send.jpg\"/>-->\r\n    <i class=\"fa fa-telegram\"></i>\r\n  </button>\r\n  \r\n</div>\r\n"
 
 /***/ }),
 
@@ -219,16 +219,16 @@ var MessageFormComponent = (function () {
             }
             console.log('custom json with url is : ' + image);
             if (image !== undefined) {
-                _this.messages.push(new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */](image, 'assets/images/eddy.png', res.timestamp, 'image', true));
+                _this.messages.push(new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */](image, '/assets/images/eddy.png', res.timestamp, 'image', true));
             }
             else {
                 console.log('size : ' + res.result.fulfillment.messages);
                 res.result.fulfillment.messages.forEach(function (element) {
-                    _this.messages.push(new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */](element.speech, 'assets/images/eddy.png', res.timestamp, 'message', true));
+                    _this.messages.push(new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */](element.speech, '/assets/images/eddy.png', res.timestamp, 'message', true));
                 });
             }
         });
-        this.message = new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('', 'assets/images/user.png');
+        this.message = new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('', '/assets/images/user.png');
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('message'),
