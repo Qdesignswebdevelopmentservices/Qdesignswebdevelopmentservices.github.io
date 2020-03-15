@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"chathead\">\r\n  <div class=\"chathead-icon\">\r\n    <img src=\"../../../assets/images/chatbots.png\" height=\"40\" width=\"40\"/>\r\n  </div>\r\n  <div class=\"chathead-text\">\r\n    GKMS: Application\r\n  </div>\r\n</div>\r\n\r\n<div class=\"chatform\">\r\n  <message-list [messages]=\"messages\"></message-list>\r\n  <message-form [message]=\"message\" [messages]=\"messages\"></message-form>\r\n</div>\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"chathead\">\r\n  <div class=\"chathead-icon\">\r\n    <img src=\"../../../assets/images/chatbots.png\" height=\"40\" width=\"70\"/>\r\n  </div>\r\n  <div class=\"chathead-text\">\r\n    GKMS: Application\r\n  </div>\r\n</div>\r\n\r\n<div class=\"chatform\">\r\n  <message-list [messages]=\"messages\"></message-list>\r\n  <message-form [message]=\"message\" [messages]=\"messages\"></message-form>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -32,7 +32,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".chatform {\n  width: 600px;\n  margin: 0 auto;\n  margin-top: 50px; }\n\n.chathead {\n  width: 600px;\n  height: 40px;\n  margin: 0 auto;\n  background-color: #eeeffe;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: space-evenly;\n      -ms-flex-pack: space-evenly;\n          justify-content: space-evenly; }\n  .chathead .chathead-icon {\n    width: 20%; }\n  .chathead .chathead-text {\n    width: 80%;\n    font-weight: bold; }\n", ""]);
+exports.push([module.i, ".chatform {\n  width: 600px;\n  margin: 0 auto;\n  margin-top: 0px;\n  background-color: #bce1ff; }\n\n.chathead {\n  width: 600px;\n  height: 50px;\n  margin: 0 auto;\n  background-color: #eeeffe;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: space-evenly;\n      -ms-flex-pack: space-evenly;\n          justify-content: space-evenly; }\n  .chathead .chathead-icon {\n    width: 20%; }\n  .chathead .chathead-text {\n    width: 80%;\n    font-weight: bold; }\n", ""]);
 
 // exports
 
@@ -62,9 +62,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var AppComponent = (function () {
     function AppComponent() {
-        this.message = new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('', 'assets/images/user.png');
+        this.message = new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('', '/assets/images/user.png');
         this.messages = [
-            new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('Welcome to GKMS chat Application..!! How can i help You', 'assets/images/eddy.png', new Date(), 'message', true)
+            new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('Welcome to GKMS Application..!! How can i help You', '/assets/images/eddy.png', new Date(), 'message', true)
         ];
     }
     AppComponent = __decorate([
@@ -156,7 +156,7 @@ var AppModule = (function () {
 /***/ "../../../../../src/app/components/message-form/message-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"chatcontrol\">\r\n  <input \r\n    type=\"text\"\r\n    class=\"form-control chatinput\"\r\n    (keyup.enter)=\"sendMessage()\" \r\n    [(ngModel)]=\"message.content\"\r\n    placeholder=\"Type your message ...\"\r\n  />\r\n  <button class=\"btn btn-info sendbtn\" (click)=\"sendMessage()\">\r\n    <img class=\" sendimg\" src=\"../../../assets/images/send.jpg\"/>\r\n    <i class=\"fa fa-telegram\"></i>\r\n  </button>\r\n  \r\n</div>\r\n"
+module.exports = "<div class=\"chatcontrol\">\r\n  <input \r\n    type=\"text\"\r\n    class=\"form-control chatinput\"\r\n    (keyup.enter)=\"sendMessage()\" \r\n    [(ngModel)]=\"message.content\"\r\n    placeholder=\"Type your message ...\"\r\n  />\r\n  <button class=\"btn btn-info sendbtn\" (click)=\"sendMessage()\">\r\n    <!--<img class=\" sending\" src=\"../../../assets/images/send.jpg\"/>-->\r\n    <i class=\"fa fa-telegram\"></i>\r\n  </button>\r\n  \r\n</div>\r\n"
 
 /***/ }),
 
@@ -219,16 +219,16 @@ var MessageFormComponent = (function () {
             }
             console.log('custom json with url is : ' + image);
             if (image !== undefined) {
-                _this.messages.push(new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */](image, 'assets/images/eddy.png', res.timestamp, 'image', true));
+                _this.messages.push(new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */](image, '/assets/images/eddy.png', res.timestamp, 'image', true));
             }
             else {
                 console.log('size : ' + res.result.fulfillment.messages);
                 res.result.fulfillment.messages.forEach(function (element) {
-                    _this.messages.push(new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */](element.speech, 'assets/images/eddy.png', res.timestamp, 'message', true));
+                    _this.messages.push(new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */](element.speech, '/assets/images/eddy.png', res.timestamp, 'message', true));
                 });
             }
         });
-        this.message = new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('', 'assets/images/user.png');
+        this.message = new __WEBPACK_IMPORTED_MODULE_1__app_models__["a" /* Message */]('', '/assets/images/user.png');
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Input */])('message'),
@@ -466,7 +466,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var DialogflowService = (function () {
     function DialogflowService(http) {
         this.http = http;
-        this.baseURL = 'https://api.dialogflow.com/v1/query?v=833ffc3cae3846f08e47dee3294f2fc5';
+        this.baseURL = 'https://bot.dialogflow.com/19459cb9-555b-4eda-88d5-47262330057e';
         this.token = __WEBPACK_IMPORTED_MODULE_3__env_environment__["a" /* environment */].token;
     }
     DialogflowService.prototype.getResponse = function (query) {
@@ -519,7 +519,7 @@ var DialogflowService = (function () {
 // The list of which env maps to which file can be found in `.angular-cli.json`.token: '6bfdabf5b3b0422e8f879011806579e0'
 var environment = {
     production: false,
-    token: '3c811bc0daa64edfba19c289f0b2efb4'
+    token: 'c2d73ba8f9f4438a8fd41c795c8f00f8'
 };
 
 
